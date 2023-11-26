@@ -1,0 +1,7 @@
+.sineClass #sine {
+    visibility: visible;
+}
+
+.sineClass #triangle {
+    visibility: hidden;
+}
