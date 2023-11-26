@@ -43,21 +43,53 @@
     </div>
   </nav>
     <div class="container">
-        
+        <!-- <link rel="stylesheet" href="css/rms-calc.css"> -->
+
+<style>
+    .sineClass #paths #sine {
+        visibility: hidden;
+    }
+</style>
+
 <h1>RMS Calculator</h1>
 
-<form>
-    <label for="peak2peak">Peak to Peak</label>
-    <input type="number" id="peak2peak" name="peak2peak"><br><br>
-    <label for="peak">Peak</label>
-    <input type="number" id="peak" name="peak"><br><br>
-    <label for="rms">RMS</label>
-    <input type="number" id="rms" name="rms"><br><br>
-    <label for="average">Average</label>
-    <input type="number" id="average" name="average"><br><br>
-</form>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="input-group input-group-lg my-3">
+                <span class="input-group-text" id="inputGroup-shape">Shape</span>
+                <select name="shape" class="form-select" id="shape">
+                    <option value="sine" selected>Sine</option>
+                    <!-- <option value="fullSine">Full Wave Rectified Sine</option>
+                    <option value="halfSine">Half Wave Rectified Sine</option>
+                    <option value="triangle">Triangle</option>
+                    <option value="square">Square</option> -->
+                </select>
+            </div>
+            <div class="input-group input-group-lg my-3">
+                <span class="input-group-text" id="inputGroup-peak2peak">Peak to Peak</span>
+                <input type="number" class="form-control" id="peak2peak">
+            </div>
+            <div class="input-group input-group-lg my-3">
+                <span class="input-group-text" id="inputGroup-peak">Peak</span>
+                <input type="number" class="form-control" id="peak">
+            </div>
+            <div class="input-group input-group-lg my-3">
+                <span class="input-group-text" id="inputGroup-rms">RMS</span>
+                <input type="number" class="form-control" id="rms">
+            </div>
+            <div class="input-group input-group-lg my-3">
+                <span class="input-group-text" id="inputGroup-average">Average</span>
+                <input type="number" class="form-control" id="average">
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <object data="/assets/waveforms.svg" class="img-fluid sineClass" alt="The waveform" />
+        </div>
+    </div>
+</div>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Sine_voltage.svg/1024px-Sine_voltage.svg.png">
+
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
 <script>
